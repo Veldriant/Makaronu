@@ -1,0 +1,209 @@
+*{
+  margin:0;
+  padding:0;
+}
+body.lock {
+  overflow: hidden;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-bold-italic.eot');
+  src: local('☺'), url('../fonts/poppins-bold-italic.woff') format('woff'), url('../fonts/poppins-bold-italic.ttf') format('truetype'), url('../fonts/poppins-bold-italic.svg') format('svg');
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-italic.eot');
+  src: local('☺'), url('../fonts/poppins-italic.woff') format('woff'), url('../fonts/poppins-italic.ttf') format('truetype'), url('../fonts/poppins-italic.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-bold.eot');
+  src: local('☺'), url('../fonts/poppins-bold.woff') format('woff'), url('../fonts/poppins-bold.ttf') format('truetype'), url('../fonts/poppins-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-extrabold-italic.eot');
+  src: local('☺'), url('../fonts/poppins-extrabold-italic.woff') format('woff'), url('../fonts/poppins-extrabold-italic.ttf') format('truetype'), url('../fonts/poppins-extrabold-italic.svg') format('svg');
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bhai';
+  src: url('../fonts/Baloo Bhai.eot');
+  src: local('☺'), url('../fonts/Baloo Bhai.woff') format('woff'), url('../fonts/Baloo Bhai.ttf') format('truetype'), url('../fonts/Baloo Bhai.svg') format('svg');
+  font-weight: inherit;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.eot');
+  src: local('☺'), url('../fonts/Poppins-Regular.woff') format('woff'), url('../fonts/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Blink */
+.button1 {
+  margin: 5px;
+  height: 60px;
+  width: 80%;
+  border: 1px solid #F01A18;
+  border-radius: 7px;
+  justify-content: space-around;
+  background: #F01A18;
+  color: #1779ba;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+}
+
+.button1:hover{
+  border: 1px solid #012A56;
+  background: #012A56;
+  font-weight: bold;
+}
+
+.button1:active{
+  background: rgb(23, 121, 186);
+  color: #fff;
+
+}
+
+@-webkit-keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+@keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+
+.blink {
+  color: #fff ;
+  -webkit-animation: blink2 1.2s linear infinite;
+  animation: blink2 1.2s linear infinite;
+}
+@-webkit-keyframes blink2 {
+  100% { color: rgba(34, 34, 34, 0); }
+}
+@keyframes blink2 {
+  100% { color: rgba(34, 34, 34, 0); }
+}
+
+/* ./blink end */
+
+/* ............./////////POPUP......///////////// */
+.popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+  font-family: "Poppins";
+}
+.popup__area{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.popup:target{
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target  .popup__content{
+  transform: translate(0px,0px);
+  opacity: 1;
+}
+.popup__body{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup__content{
+  background-color: #fff;
+  width: 900px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0
+  transform: translate(0px,-100%);
+}
+.popup__title{
+  font-size: 15px;
+  margin: 0px 0px 1em 0px;
+}
+.popup__text{
+  font-size: 19px;
+  padding: 10px;
+  padding-right: 20px;
+}
+.popup__close{
+  margin-top: -20px;
+  width: 20px;
+  position: sticky;
+  margin-right: -20px;
+  float: right;
+  text-align: center;
+  right: 0px;
+  top: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: red;
+
+
+  padding: 5px;
+}
+.popup__close:hover{
+  box-shadow: 0 0 10px 5px red;
+  transition: .5s;
+}
+
+
+.popup__links{
+  display: block;
+}
+.popup h2 {
+  margin: 10px 0px 10px 0px;
+}
+.list{
+  margin: 10px 0 0 10px;
+}
+
+li{
+  margin-top: 5px;
+}
+
+.popuptext h2,h3{
+  margin: 15px 0 10px 0;
+}
+
+
+.popuptext ul,li{
+  margin-left: 25px;
+}
+
+.list1{
+  margin-left: 25px;
+}
+.vsp {
+  margin-top: 5px;
+}
